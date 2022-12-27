@@ -78,6 +78,6 @@ let order = 0
     }
 }
 
-document.querySelector("#register").addEventListener("click", yoxla = (a)=>{
-    console.log(a.target)
-})
+// document.querySelector("#register").addEventListener("click", (a)=>{
+//     console.log(a.target)
+// })
