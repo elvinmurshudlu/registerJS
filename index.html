@@ -19,23 +19,27 @@
         </div>
         <div class="notification_messages">
             <div class="notification_messages_message success_Msg ">
-                <h3>Success</h3>
-                <h3>This is a success toast component</h3>
+                <div class="timer success_timer"></div>
+                <h3 class="notificationFixed_header">Success</h3>
+                <h3 class="notificationFixed_content">This is a success toast component</h3>
                 <i class="fa-solid fa-xmark success_close"></i>
             </div>
             <div class="notification_messages_message danger_Msg">
-                <h3>Danger</h3>
-                <h3>This is a error toast component</h3>
+                <div class="timer danger_timer"></div>
+                <h3 class="notificationFixed_header" >Danger</h3>
+                <h3 class="notificationFixed_content">This is a error toast component</h3>
                 <i class="fa-solid fa-xmark danger_close"></i>
             </div>
             <div class="notification_messages_message info_Msg">
-                <h3>Info</h3>
-                <h3>This is an info toast component</h3>
+                <div class="timer info_timer"></div>
+                <h3 class="notificationFixed_header">Info</h3>
+                <h3 class="notificationFixed_content">This is an info toast component</h3>
                 <i class="fa-solid fa-xmark info_close"></i>
             </div>
             <div class="notification_messages_message warning_Msg">
-                <h3>Warning</h3>
-                <h3>This is a warning toast component</h3>
+                <div class="timer warning_timer"></div>
+                <h3 class="notificationFixed_header">Warning</h3>
+                <h3 class="notificationFixed_content">This is a warning toast component</h3>
                 <i class="fa-solid fa-xmark warning_close"></i>
             </div>
             
@@ -64,12 +68,13 @@
                     <i class="fa-solid fa-xmark size_close_sym"></i>
                 </div>
                 <div class="register_form_">
-                    <form action="">
+                    <form onsubmit="return validate()" action="">
                         <input class="input_little" type="text" placeholder="Name" required>
                         <input class="input_little" type="text" placeholder="Surname" required>
                         <input class="input_big" type="text" placeholder="Mobile number or email" required>
-                        <input class="input_big" type="password" placeholder="Password" required>
-                        <input class="input_big" type="password" placeholder="Confirm password" required><br>
+                        <input class="input_big passwdOne " type="password" placeholder="Password" required>
+                        <input class="input_big passwdTwo" type="password" placeholder="Confirm password" required><br>
+                        <p class="hidden wrongPasswd">Wrong password!</p></br>
                         <label for="male"><input id="male" type = "radio" value="male" name="gender" required> Male </label>                       
                         <label for="famale"><input id="famale" type = "radio" value="famale" name="gender" required>Famale</label><br>
                         <input id="register" type="submit" value="Register">

@@ -6,8 +6,33 @@ let blur = document.querySelector(".blur")
 let login = document.querySelector(".login_form")
 let register = document.querySelector(".register_form")
 let footer = document.querySelector(".footer_size")
-
+let wrongPasswd = document.querySelector('.wrongPasswd')
+let arr = [dangerClose,infoClose,successClose,warningClose]
 let order = 0
+
+
+function validate(){
+    let passwd = document.querySelector(".passwdOne")
+    let passwd2 = document.querySelector(".passwdTwo")
+    if(passwd.value != passwd2.value){
+        
+        passwd2.style.borderColor = "red"
+        wrongPasswd.classList.remove("hidden")        
+        return false;
+    }else{
+        console.log("true")
+    }
+}
+
+function notificationEnd(x){
+    setTimeout(()=>notificationClose(x),4500)
+    function notificationClose(x){
+        for(let a of x){
+            a.classList.add("hidden")
+        }
+        
+    }
+}
 
 
  window.onclick = e => {
@@ -28,31 +53,42 @@ let order = 0
         
 
     }
-    console.log(e.target.classList)
+    // console.log(e.target.classList)
     //show notifications
 
     if(e.target.classList.contains("warning") && warningClose.classList.contains("hidden")){
         warningClose.classList.remove("hidden")
         warningClose.style.order = order
         order ++
+        // setTimeout(()=>notificationClose([warningClose]),3000)
+        notificationEnd([warningClose])
         
     }
     if(e.target.classList.contains("success") && successClose.classList.contains("hidden")){
         successClose.classList.remove("hidden")
         successClose.style.order = order
         order ++
+        // setTimeout(()=>notificationClose([successClose]),3000)
+        notificationEnd([successClose])
+
         
     }
     if(e.target.classList.contains("info") && infoClose.classList.contains("hidden")){
         infoClose.classList.remove("hidden")
         infoClose.style.order = order
         order ++
+        // setTimeout(()=>notificationClose([infoClose]),3000)
+        notificationEnd([infoClose])
+
         
     }
     if(e.target.classList.contains("danger") && dangerClose.classList.contains("hidden")){
         dangerClose.classList.remove("hidden")
         dangerClose.style.order = order
         order ++
+        // setTimeout(()=>notificationClose([dangerClose]),3000)
+        notificationEnd([dangerClose])
+
         
     }
 
@@ -78,6 +114,5 @@ let order = 0
     }
 }
 
-// document.querySelector("#register").addEventListener("click", (a)=>{
-//     console.log(a.target)
-// })
+
+notificationEnd(arr)

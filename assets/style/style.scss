@@ -89,7 +89,20 @@ button:hover{
             padding-left: 10px;
             color: white  ;
             position: relative;
+            overflow: hidden;
         }
+        .timer{
+            position: absolute;
+            // z-index: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            right: 0;
+            animation-name: closingAnimation !important;
+            animation-duration: 4.5s;
+        }
+
+
         &_message:hover{
             opacity: 1;
         }
@@ -242,6 +255,7 @@ input[type=submit]{
     width: 350px;
     height: 450px;
     background-color: white;
+    
     position: absolute;
     top: 20px;
     border-radius: 7px;
@@ -258,4 +272,41 @@ input[type=submit]{
         align-items: center;
         padding: 5px 15px;
     }
+}
+
+.wrongPasswd{
+    color: red;
+    font-size: 18px;
+
+}
+
+@keyframes closingAnimation {
+    from{width: 100%;}
+    to{width: 0px;}
+    
+}
+
+.danger_timer{
+    background-color: red!important;
+   
+}
+.success_timer{
+    background-color:#097709 !important;
+}
+.warning_timer{
+    background-color: orange !important;
+}
+.info_timer{
+    background-color: blue !important;
+
+}
+
+.notificationFixed_header{
+    top: 20px;
+    position: absolute;
+}
+.notificationFixed_content{
+    top: 40px;
+
+    position: absolute;
 }
