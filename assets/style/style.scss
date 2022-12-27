@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,body{
+    width: 100%;
+    height: 100vh;
+}
+
+i{
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
+button:hover{
+    background-color: #7e75e1 !important;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .blur{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.473);
+        z-index: 10;
+    }
+    
+    .notifications{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 40px;
+        width: 100%;
+        height: 120px;
+        
+        button{
+            width: 160px;
+            height: 50px;
+            background-color: #000;
+            color: white;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .success{
+            background-color: green;
+        }.danger{
+            background-color: red;
+        }.info{
+            background-color: rgb(91, 91, 235);
+        }
+        .warning{
+            background-color: orange;
+        }
+    }
+    .notification_messages{
+        width: 380px;
+        height: 400px;
+        // background-color: red;
+        position: absolute;
+        top: 120px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        z-index: 7;
+        // justify-content: center;
+        row-gap: 12px;
+        &_message{
+            width: 100%;
+            height: 90px;
+            background-color: blue;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10px;
+            color: white  ;
+            position: relative;
+        }
+        &_message:hover{
+            opacity: 1;
+        }
+        
+
+
+        i{
+            position: absolute;
+            right: 15px;
+            bottom: 24px;
+            cursor: pointer;
+            
+        }i:hover{
+            color: black;
+        }
+    }
+    .login_register{
+        width: 400px;
+        height: 300px;
+        // background-color: black;
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        button{
+            width: 150px;
+            height: 40px;
+            border-radius: 10px ;
+            background-color: rgb(85, 200, 161);
+            font-size: 17px;
+        }
+        .login_form{
+            height: 300px !important;
+            &_{
+                display: flex;
+                justify-content: center;
+                padding:30px 0;
+                
+                input{
+                    margin-bottom: 20px;
+                    width: 240px;
+                    height: 40px;
+                    font-size: 16px;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    border: 1px solid grey;
+                }
+                
+                input:focus{
+                    outline: 0;
+                    border: 1px solid blue;
+                }
+            }
+        }
+        .register_form{
+            width: 400px !important;
+            height: 400px !important;
+            
+            &_{
+                
+                form{
+                    text-align: center;
+                    input[type=text],input[type=password],input[type=submit]{
+                        height: 35px;
+                        margin-bottom: 15px;
+                        border-radius: 5px;
+                        border: 1px solid grey;
+                        padding-left: 5px;
+                    }
+                    .input_big ,input[type=submit]{
+                        width: 340px;
+                    }
+                    label{
+                        width: 90px;
+                        height: 40px;
+                        display: inline-block;
+                        border: 1px solid grey;
+                        padding-top: 10px;
+                        margin-left: 10px;
+                        border-radius: 5px;
+                        margin-bottom: 40px;
+                    }
+                    
+                }
+            }
+        }
+
+        
+    }
+    .footer{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        // background-color: #000;
+        height: 420px;
+        justify-self: flex-end;
+        padding: 50px 0;
+        &_size{
+            position: absolute;
+            left: 580px;
+            top: -220px;
+            &_text{
+                width: 100%;
+                height: 100%;                
+                padding: 10px 15px;
+                
+                overflow: scroll;
+                
+            }
+        }
+        h3{
+            cursor: pointer;
+        }
+    }
+}
+
+.success_Msg{
+    background-color: #5cb85c !important;
+    opacity: 0.7;
+}
+.danger_Msg{
+    background-color: #dd6561 !important;
+    opacity: 0.7;
+
+}
+.info_Msg{
+    background-color: #6cc6e1 !important;
+    opacity: 0.7;
+
+}
+.warning_Msg{
+    background-color: #f2b560 !important;
+    opacity: 0.7;
+
+}
+
+.hidden{
+    display: none !important;
+}
+
+input[type=submit]{
+    background-color: #1877f2;
+    color: white;
+    font-size: 18px;
+}
+
+.size{
+    width: 350px;
+    height: 450px;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    border-radius: 7px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    z-index: 11;
+    &_close{
+        width: 100%;
+        height: 40px;
+        // background-color: red;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 5px 15px;
+    }
+}

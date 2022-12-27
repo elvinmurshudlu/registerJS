@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+}
+
+i {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7e75e1 !important;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .blur {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.473);
+  z-index: 10;
+}
+.container .notifications {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  width: 100%;
+  height: 120px;
+}
+.container .notifications button {
+  width: 160px;
+  height: 50px;
+  background-color: #000;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.container .notifications .success {
+  background-color: green;
+}
+.container .notifications .danger {
+  background-color: red;
+}
+.container .notifications .info {
+  background-color: rgb(91, 91, 235);
+}
+.container .notifications .warning {
+  background-color: orange;
+}
+.container .notification_messages {
+  width: 380px;
+  height: 400px;
+  position: absolute;
+  top: 120px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 7;
+  row-gap: 12px;
+}
+.container .notification_messages_message {
+  width: 100%;
+  height: 90px;
+  background-color: blue;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  color: white;
+  position: relative;
+}
+.container .notification_messages_message:hover {
+  opacity: 1;
+}
+.container .notification_messages i {
+  position: absolute;
+  right: 15px;
+  bottom: 24px;
+  cursor: pointer;
+}
+.container .notification_messages i:hover {
+  color: black;
+}
+.container .login_register {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container .login_register button {
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(85, 200, 161);
+  font-size: 17px;
+}
+.container .login_register .login_form {
+  height: 300px !important;
+}
+.container .login_register .login_form_ {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+.container .login_register .login_form_ input {
+  margin-bottom: 20px;
+  width: 240px;
+  height: 40px;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+.container .login_register .login_form_ input:focus {
+  outline: 0;
+  border: 1px solid blue;
+}
+.container .login_register .register_form {
+  width: 400px !important;
+  height: 400px !important;
+}
+.container .login_register .register_form_ form {
+  text-align: center;
+}
+.container .login_register .register_form_ form input[type=text], .container .login_register .register_form_ form input[type=password], .container .login_register .register_form_ form input[type=submit] {
+  height: 35px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding-left: 5px;
+}
+.container .login_register .register_form_ form .input_big, .container .login_register .register_form_ form input[type=submit] {
+  width: 340px;
+}
+.container .login_register .register_form_ form label {
+  width: 90px;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid grey;
+  padding-top: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+.container .footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 420px;
+  justify-self: flex-end;
+  padding: 50px 0;
+}
+.container .footer_size {
+  position: absolute;
+  left: 580px;
+  top: -220px;
+}
+.container .footer_size_text {
+  width: 100%;
+  height: 100%;
+  padding: 10px 15px;
+  overflow: scroll;
+}
+.container .footer h3 {
+  cursor: pointer;
+}
+
+.success_Msg {
+  background-color: #5cb85c !important;
+  opacity: 0.7;
+}
+
+.danger_Msg {
+  background-color: #dd6561 !important;
+  opacity: 0.7;
+}
+
+.info_Msg {
+  background-color: #6cc6e1 !important;
+  opacity: 0.7;
+}
+
+.warning_Msg {
+  background-color: #f2b560 !important;
+  opacity: 0.7;
+}
+
+.hidden {
+  display: none !important;
+}
+
+input[type=submit] {
+  background-color: #1877f2;
+  color: white;
+  font-size: 18px;
+}
+
+.size {
+  width: 350px;
+  height: 450px;
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  border-radius: 7px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  z-index: 11;
+}
+.size_close {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 5px 15px;
+}/*# sourceMappingURL=style.css.map */
