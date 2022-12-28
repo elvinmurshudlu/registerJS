@@ -33,13 +33,13 @@ function notificationEnd(x){
         
     }
 }
-
-
- window.onclick = e => {
-   //notification close 
-    if(e.target.classList.contains("success_close")){
-        e.target.parentNode.classList.add("hidden")
-        
+// windoc.onclick = e =>{} ----------------------------------------------
+                                                                     //--
+window.addEventListener("click",function func(e){                    //--
+   //notification close                                              //--
+    if(e.target.classList.contains("success_close")){             //<----
+        e.target.parentNode.classList.add("hidden")                  
+                                                        
     }if(e.target.classList.contains("danger_close")){
         e.target.parentNode.classList.add("hidden")
         
@@ -112,7 +112,10 @@ function notificationEnd(x){
        blur.classList.remove("hidden")
        
     }
-}
+})
 
+// window.addEventListener("click",function func(e){
+//     console.log(e.target)
+// })
 
 notificationEnd(arr)
